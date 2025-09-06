@@ -1,3 +1,4 @@
+import 'package:app/pages/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -49,6 +50,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              child: const Text("跳转新页面"),
+            ),
             const Text(
               '按钮点击次数:',
             ),
